@@ -9,115 +9,124 @@
 	</head>
 	<body>
 	<!-- header -->
-		<header class="main-header">
-			<img class="header-logo" src="img/logo.png" alt="logo-barbershop" width="368" height="204">
-			<nav class="header-menu">
-				<ul>
-					<li><a class="menu-item" href="#">Информация</a></li>
-					<li><a class="menu-item" href="#">Новости</a></li>
-					<li><a class="menu-item" href="#">Прайс-Лист</a></li>
-					<li><a class="menu-item" href="#">Магазин</a></li>
-					<li><a class="menu-item" href="#">Контакты</a></li>
-				</ul>
-			</nav>
-			<a class="menu-item" href="#">Вход</a>
+		<header class="main-header clearfix">
+			<div class="container clearfix">
+				<nav class="header-menu">
+					<div class="header-logo">
+						<img src="img/logo-small.png" alt=Лого width="111" height="24">
+					</div>
+					<ul>
+						<li><a class="menu-item" href="#">Информация</a></li>
+						<li><a class="menu-item" href="#">Новости</a></li>
+						<li><a class="menu-item" href="#">Прайс-Лист</a></li>
+						<li><a class="menu-item" href="#">Магазин</a></li>
+						<li><a class="menu-item" href="#">Контакты</a></li>
+					</ul>
+				</nav>
+				<a class="menu-item" href="#">Вход</a>
+			</div>
 		</header>
 	<!-- main -->
-		<main class="container">
-			<section class="catalog-left-column">
-				<h1 class="catalog-left-title">Средства для ухода</h1>
-				<ul class="breadcrumbs">
+		<main class="container clearfix">
+			<div class="catalog-title">
+				<h1>Средства для ухода</h1>
+				<ul class="breadcrumbs clearfix">
 					<li><a href="#">Главная</a></li>
 					<li><a href="#">Магазин</a></li>
 					<li><span>Средства для ухода</span></li>
 				</ul>
+			</div>
+			<aside class="filter">
 				<form>
-					<p class="title brands-title">Производители</p>
-					<label for="baxter"><input type="checkbox" id="baxter" name="brand" checked>Baxter of California</label>
-					<label for="natty"><input type="checkbox" id="natty" name="brand">Mr Natty</label>
-					<label for="suavecito"><input type="checkbox" id="suavecito" name="brand" checked>Suavecito</label>
-					<label for="malin"><input type="checkbox" id="malin" name="brand">Malin+Goetz</label>
-					<label for="murrays"><input type="checkbox" id="murrays" name="brand">Murray's</label>
-					<label for="american-crew"><input type="checkbox" id="american-crew" name="brand" checked>American Crew</label>
+					<h2 class="title brands-title">Производители</h2>
+					<label for="baxter"><input type="checkbox" id="baxter" name="brand" checked>Baxter of California</label><br>
+					<label for="natty"><input type="checkbox" id="natty" name="brand">Mr Natty</label><br>
+					<label for="suavecito"><input type="checkbox" id="suavecito" name="brand" checked>Suavecito</label><br>
+					<label for="malin"><input type="checkbox" id="malin" name="brand">Malin+Goetz</label><br>
+					<label for="murrays"><input type="checkbox" id="murrays" name="brand">Murray's</label><br>
+					<label for="american-crew"><input type="checkbox" id="american-crew" name="brand" checked>American Crew</label><br>
+					<h2 class="title groups-title">Группы товаров</h2>
+					<label for="group-razor"><input type="radio" id="group-razor" name="group" value="razor-items">Бритвенные принадлежности</label><br>
+					<label for="group-care"><input type="radio" id="group-care" name="group" value="care" checked>Средства для ухода</label><br>
+					<label for="group-accessories"><input type="radio" id="group-accessories" name="group" value="accessories">Аксессуары</label><br>
+					<button class="btn btn-groups" type="submit" name="show" value="Показать">Показать</button>
 				</form>
-					<form>
-						<p class="title groups-title">Группы товаров</p>
-						<label for="group-razor"><input type="radio" id="group-razor" name="group" value="razor-items">Бритвенные принадлежности</label>
-						<label for="group-care"><input type="radio" id="group-care" name="group" value="care" checked>Средства для ухода</label>
-						<label for="group-accessories"><input type="radio" id="group-accessories" name="group" value="accessories">Аксессуары</label>
-						<button class="btn btn-groups" type="submit" name="show" value="Показать">Показать</button>
-					</form>
-			</section>
+			</aside>
 	<!-- Gallery -->
 			<div class="gallery">
-				<article class="item">
-					<img src="img/item-1.jpg" alt="Набор для путешествийй Baxter of California" width="220" height="167">
-					<h2 class="gallery-item-info">Набор для путешествий</h2>
-					<p class="gallery-item-brand">"Baxter of California"</p>
-					<div class="item-price">2900 руб.</div>
-					<a class="btn btn-item-buy" href="#">Купить</a>
-				</article>
-				<article class="item">
-					<img src="img/item-2.jpg" alt="Кондиционер Baxter of California" width="220" height="167">
-					<h2 class="gallery-item-info">Увлажняющий кондиционер</h2>
-					<p class="gallery-item-brand">"Baxter of California"</p>
-					<div class="item-price">750 руб.</div>
-					<a class="btn btn-item-buy" href="#">Купить</a>
-				</article>
-				<article class="item">
-					<img src="img/item-3.jpg" alt="Гель для волос Suavecito" width="220" height="167">
-					<h2 class="gallery-item-info">Гель для волос</h2>
-					<p class="gallery-item-brand">"Suavecito"</p>
-					<div class="item-price">290 руб.</div>
-					<a class="btn btn-item-buy" href="#">Купить</a>
-				</article>
-				<article class="item">
-					<img src="img/item-4.jpg" alt="Глина American Crew" width="220" height="167">
-					<h2 class="gallery-item-info">Глина для укладки волос</h2>
-					<p class="gallery-item-brand">"American Crew"</p>
-					<div class="item-price">500 руб.</div>
-					<a class="btn btn-item-buy" href="#">Купить</a>
-				</article>
-				<article class="item">
-					<img src="img/item-5.jpg" alt="Гель American Crew" width="220" height="167">
-					<h2 class="gallery-item-info">Гель для волос</h2>
-					<p class="gallery-item-brand">"American Crew"</p>
-					<div class="item-price">300 руб.</div>
-					<a class="btn btn-item-buy" href="#">Купить</a>
-				</article>
-				<article class="item">
-					<img src="img/item-6.jpg" alt="Набор для бритья Baxter of California" width="220" height="167">
-					<h2 class="gallery-item-info">Набор для бритья</h2>
-					<p class="gallery-item-brand">"Baxter of California"</p>
-					<div class="item-price">3900 руб.</div>
-					<a class="btn btn-item-buy" href="#">Купить</a>
-				</article>
+				<div class="gallery-items clearfix">
+					<article class="item">
+						<img src="img/item-1.jpg" alt="Набор для путешествийй Baxter of California" width="220" height="167">
+						<h1 class="gallery-item-title"><a href="#">Набор для путешествий</br>
+							"Baxter of California"</a></h1>
+						<div class="item-price">2900 руб.</div>
+						<a class="btn btn-item-buy" href="#">Купить</a>
+					</article>
+					<article class="item">
+						<img src="img/item-2.jpg" alt="Кондиционер Baxter of California" width="220" height="167">
+						<h1 class="gallery-item-info"><a href="#">Увлажняющий кондиционер</br>
+							"Baxter of California"</a></h1>
+						<div class="item-price">750 руб.</div>
+						<a class="btn btn-item-buy" href="#">Купить</a>
+					</article>
+					<article class="item">
+						<img src="img/item-3.jpg" alt="Гель для волос Suavecito" width="220" height="167">
+						<h1 class="gallery-item-info"><a href="">Гель для волос</br>
+							"Suavecito"</a></h1>
+						<div class="item-price">290 руб.</div>
+						<a class="btn btn-item-buy" href="#">Купить</a>
+					</article>
+					<article class="item">
+						<img src="img/item-4.jpg" alt="Глина American Crew" width="220" height="167">
+						<h1 class="gallery-item-info"><a href="">Глина для укладки волос</br>
+							"American Crew"</a></h1>
+						<div class="item-price">500 руб.</div>
+						<a class="btn btn-item-buy" href="#">Купить</a>
+					</article>
+					<article class="item">
+						<img src="img/item-5.jpg" alt="Гель American Crew" width="220" height="167">
+						<h1 class="gallery-item-info"><a href="">Гель для волос</br>
+							"American Crew"</a></h1>
+						<div class="item-price">300 руб.</div>
+						<a class="btn btn-item-buy" href="#">Купить</a>
+					</article>
+					<article class="item">
+						<img src="img/item-6.jpg" alt="Набор для бритья Baxter of California" width="220" height="167">
+						<h1 class="gallery-item-info"><a href="">Набор для бритья</br>
+							"Baxter of California"</a></h1>
+						<div class="item-price">3900 руб.</div>
+						<a class="btn btn-item-buy" href="#">Купить</a>
+					</article>
+				</div>
+				<div class="pager">
+					<button class="btn btn-pages">1</button>
+					<button class="btn btn-pages">2</button>
+					<button class="btn btn-pages">3</button>
+					<button class="btn btn-pages">4</button>
+				</div>
 			</div>
 
-			<div class="pages">
-				<button class="btn btn-pages">1</button>
-				<button class="btn btn-pages">2</button>
-				<button class="btn btn-pages">3</button>
-				<button class="btn btn-pages">4</button>
-			</div>
+
 		</main>
 	<!-- footer -->
-		<footer class="main-footer">
-			<div class="footer-contacts">
-				<p class="footer-info">Барбершоп "Бородинский"</p>
-				<p class="footer-info">Адрес: г.Санкт-Петербург, Ул. Б.Конюшенная, д.19/8</p>
-				<a class="footer-info" href="#">Как нас найти?</a>
-				<p class="footer-info">Телефон: +7(495)666-02-66</p>
-			</div>
-			<div class="footer-social">
-				<p class="footer-info">Давайте дружить!</p>
-				<div class="social-icon social-icon-vk"></div>
-				<div class="social-icon social-icon-fb"></div>
-				<div class="social-icon social-icon-inst"></div>
-			</div>
-			<div class="footer-developer">
-				<p class="footer-info">Разработано:</p>
-				<a class="btn btn-developer" href="https://htmlacademy.ru/">htmlacademy.ru</a>
+		<footer class="main-footer clearfix">
+			<div class="container">
+				<div class="footer-contacts">
+					<p class="footer-info">Барбершоп "Бородинский"<br>
+					Адрес: г.Санкт-Петербург, Ул. Б.Конюшенная, д.19/8</br>
+					<a href="#">Как нас найти?</a><br>
+					Телефон: +7(495)666-02-66</p>
+				</div>
+				<div class="footer-social">
+					<p class="footer-info">Давайте дружить!</p>
+					<div class="social-icon social-icon-vk"></div>
+					<div class="social-icon social-icon-fb"></div>
+					<div class="social-icon social-icon-inst"></div>
+				</div>
+				<div class="footer-developer">
+					<p class="footer-info">Разработано:</p>
+					<a class="btn btn-developer" href="https://htmlacademy.ru/">htmlacademy.ru</a>
+				</div>
 			</div>
 		</footer>
 	</body>
