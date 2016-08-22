@@ -7,52 +7,57 @@
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
 		<title>Страница товара</title>
 	</head>
-	<body>
+	<body class="inner-page">
 <!-- header -->
-		<header class="main-header clearfix">
-			<div class="container clearfix">
-				<nav class="header-menu">
-					<div class="header-logo">
-						<img src="img/logo-small.png" alt=Лого width="111" height="24">
-					</div>
-					<ul>
-						<li><a class="menu-item" href="#">Информация</a></li>
-						<li><a class="menu-item" href="#">Новости</a></li>
-						<li><a class="menu-item" href="#">Прайс-Лист</a></li>
-						<li><a class="menu-item" href="#">Магазин</a></li>
-						<li><a class="menu-item" href="#">Контакты</a></li>
-					</ul>
-				</nav>
-				<a class="menu-item" href="#">Вход</a>
-			</div>
-		</header>
+<header class="main-header">
+	<div class="container">
+		<nav class="header-menu clearfix">
+			<ul class="clearfix">
+				<li class="menu-item"><a class="header-logo" href="#"></a></li>
+				<li class="menu-item"><a href="#">Информация</a></li>
+				<li class="menu-item"><a href="#">Новости</a></li>
+				<li class="menu-item"><a href="#">Прайс-Лист</a></li>
+				<li class="menu-item"><a href="#">Магазин</a></li>
+				<li class="menu-item"><a href="#">Контакты</a></li>
+			</ul>
+		</nav>
+			<a class="user-block" href="#">Вход</a>
+	</div>
+</header>
 <!-- main -->
 		<main class="container clearfix">
 			<div class="content-title clearfix">
 				<h1 class="item-title">Набор для путешествий "Baxter of California"</h1>
 				<ul class="breadcrumbs">
-					<li><a href="#">Главная</a></li>
-					<li><a href="#">Магазин</a></li>
-					<li><a href="#">Средства для ухода</a></li>
-					<li><span>Набор для путешествий "Baxter of California"</span></li>
+					<li class="menu-item"><a href="#">Главная</a></li>
+					<li class="menu-item"><a href="#">Магазин</a></li>
+					<li class="menu-item"><a href="#">Средства для ухода</a></li>
+					<li class="menu-item"><span>Набор для путешествий "Baxter of California"</span></li>
 				</ul>
 			</div>
 	<!-- left column -->
 			<section class="item-left-col">
-				<div class="item-veiw">
-					<img class="item-pic-big" src="img/baxter-big.jpg" alt="Набор Baxter of California" width="460" height="500">
-					<img class="pic-item-small" src="img/baxter-small1.jpg" alt="Набор 1" width="140" height="150">
-					<img class="pic-item-small" src="img/baxter-small2.jpg" alt="Набор 2" width="140" height="150">
-					<img class="pic-item-small" src="img/baxter-small3.jpg" alt="Набор 3" width="140" height="150">
+				<img class="item-pic-big" src="img/baxter-big.jpg" alt="Набор Baxter of California" width="460" height="500">
+				<div class="item-view">
+					<ul>
+						<li><a href=""><img class="item-pic-small" src="img/baxter-small1.jpg" alt="Набор 1" width="140" height="150"></a></li>
+						<li><a href=""><img class="item-pic-small" src="img/baxter-small2.jpg" alt="Набор 2" width="140" height="150"></a></li>
+						<li><a href=""><img class="item-pic-small" src="img/baxter-small3.jpg" alt="Набор 3" width="140" height="150"></a></li>
+					</ul>
 				</div>
 			</section>
 	<!-- right column -->
 			<section class="item-right-col">
-				<h2 class="item-in-stock">Есть в наличии</h2>
-				<p class="item-vendor">Артикул: Dexter-AE</p>
+				<div class="stock clearfix">
+					<h2>Есть в наличии</h2>
+					<p class="item-vendor">Артикул: Dexter-AE</p>
+				</div>
 				<p class="item-about">Travel Kit - Необходимый аксессуар во время любого путешествия. В аккуратной кожанной сумке находится все, что нужно для бритья и ухода за кожей во время рабочей поездки иди отдыха: средство для умывания, увлажняющий крем, крем после бритья, шампунь. Набор так же может стать отличным подарком.</p>
-				<div class="item-price">2900 руб.</div>
-				<a class="btn btn-item-buy" href="#">Купить</a>
+				<div class="item-price">
+					<span>2900 руб.</span>
+					<a class="btn btn-item-buy" href="#">Купить</a>
+				</div>
+
 				<p class="item-features-title">В набор входят:</p>
 					<ul class="item-features">
 						<li>Средство для умывания(50мл)</li>
@@ -74,9 +79,9 @@
 				</div>
 				<div class="footer-social">
 					<p class="footer-info">Давайте дружить!</p>
-					<div class="social-icon social-icon-vk"></div>
-					<div class="social-icon social-icon-fb"></div>
-					<div class="social-icon social-icon-inst"></div>
+					<a class="social-btn social-btn-vk" href="#"></a>
+					<a class="social-btn social-btn-fb" href="#"></a>
+					<a class="social-btn social-btn-inst" href="#"></a>
 				</div>
 				<div class="footer-developer">
 					<p class="footer-info">Разработано:</p>
