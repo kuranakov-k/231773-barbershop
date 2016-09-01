@@ -46,7 +46,7 @@
 					<h2 class="title groups-title">Группы товаров</h2>
 					<input type="radio" id="group-razor" name="group" value="razor-items"><label for="group-razor">Бритвенные принадлежности</label><br>
 					<input type="radio" id="group-care" name="group" value="care" checked><label for="group-care">Средства для ухода</label><br>
-					<input type="radio" id="group-accessories" name="group" value="accessories"><label for="group-accessories">Аксессуары</label><br>
+					<input type="radio" id="group-accessories" name="group" value="accessories" disabled><label for="group-accessories">Аксессуары</label><br>
 					<button class="btn btn-groups" type="submit" name="show" value="Показать">Показать</button>
 				</form>
 			</aside>
@@ -60,7 +60,7 @@
 						</div>
 						<div class="item-info">
 							<h1 class="gallery-item-title">
-							<a href="#">Набор для путешествий<br>
+							<a href="catalog-item.html">Набор для путешествий<br>
 								&laquo;Baxter of California&raquo;</a></h1>
 							<div class="item-price">
 								<span>2900 руб.</span>
@@ -160,7 +160,7 @@
 			<div class="footer-contacts">
 				<p class="footer-info">Барбершоп "Бородинский"<br>
 				Адрес: г.Санкт-Петербург, Ул. Б.Конюшенная, д.19/8</br>
-				<a href="#">Как нас найти?</a><br>
+				<a class="open-map" href="#">Как нас найти?</a><br>
 				Телефон: +7(495)666-02-66</p>
 			</div>
 			<div class="footer-social">
@@ -175,5 +175,22 @@
 			</div>
 		</div>
 	</footer>
+    <div class="login">
+        <button class="btn-close"></button>
+        <h3>Личный кабинет</h3>
+        <form>
+            <p>Введите пожалуйста свой логин и пароль</p>
+            <input class="form-login" type="text" name="login" placeholder="Логин">
+            <input class="form-password" type="text"name="password" placeholder="Пароль">
+            <input type="checkbox" id="remember"><label for="remember">Запомните меня<span></span></label>
+            <a href="#">Я забыл пароль!</a>
+            <button class="enter" type="submit">Войти</button>
+        </form>
+    </div>
+    <div class="map">
+        <button class="btn-close-map"></button>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5989424124036!2d30.320894616175952!3d59.93879686904783!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+ul.%2C+19%2C+Sankt-Peterburg%2C+191186!5e0!3m2!1sen!2sru!4v1472735656423" width="780" height="570" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <script src="js/script.js"></script>
 	</body>
 </html>

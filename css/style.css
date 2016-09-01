@@ -76,15 +76,18 @@ body {
 .user-block {
 	position: relative;
 	display: inline-block;
+	box-sizing: border-box;
+	height: 72px;
 	vertical-align: top;
 	padding: 25px 20px;
 	padding-left: 50px;
 	float: right;
 	font-size: 16px;
-  line-height: 20px;
+	line-height: 18px;
   color: #ffffff;
   text-decoration: none;
 }
+
 .user-block::before {
 	content: '';
 	position: absolute;
@@ -110,11 +113,25 @@ body {
 	box-sizing: border-box;
 	float: left;
 }
+.menu-item {
+    position: relative;
+}
 .menu-item a {
 	line-height: 22px;
 }
-.menu-item-active {
-	border-bottom: 4px solid #fff;
+li.menu-item-active {
+    position: relative;
+    background-color: none;
+
+}
+li.menu-item-active::after {
+    content: "";
+    position: absolute;
+    height: 5px;
+    right: 20px;
+    bottom: 0;
+    left: 20px;
+    background-color: #ffffff;
 
 }
 /*=========features=========*/
@@ -178,7 +195,7 @@ body {
 .breadcrumbs li::before {
 	content: '';
 	position: absolute;
-	top: 50%;
+	top: 12px;
 	right: 16px;
 	margin-top: -5px;
 	width: 8px;
@@ -210,13 +227,19 @@ body {
 .filter input {
 	position: relative;
 	display: none;
+	cursor: pointer;
 }
+
 .filter label {
 	position: relative;
 	display: inline-block;
 	line-height: 18px;
 	padding-left: 40px;
 	margin-bottom: 20px;
+	cursor: pointer;
+}
+.filter label:hover {
+    color: #663d15;
 }
 .filter input[type="checkbox"] + label::before {
 	content: '';
@@ -245,13 +268,18 @@ body {
 	background-position: 0 -37px;
 }
 .filter input[type="radio"]:checked + label::before {
-	background-position: 0 0px;
+	background-position: 0 -74px;
 }
 .filter input[type="radio"]:checked + label:hover::before {
 	background-position: 0 -74px;
 }
-.filter input:disabled + label::before {
-	opacity: 0.1;
+.filter input:disabled + label {
+	opacity: 0.5;
+}
+.filter input:disabled + label:hover {
+    cursor: default;
+    color: #000000;
+    opacity: 0.5;
 }
 .gallery {
 	position: relative;
@@ -669,4 +697,178 @@ td:nth-child(2) {
 .price-list {
 	margin-bottom: 120px;
 	border-collapse: collapse;
+}
+.login {
+    position: fixed;
+    top: 200px;
+    left: 50%;
+    display: none;
+    margin-left: -230px;
+    background: url("../img/pattern-white.jpg");
+    color: #000000;
+    padding: 56px 80px;
+    box-sizing: border-box;
+    width: 460px;
+    box-shadow: 0 0 30px #000;
+}
+.login .btn-close {
+    font-size: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+.login .btn-close::before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    right: -40px;
+    width: 25px;
+    border: 3px solid #d0d0d0;
+    transform: rotate(45deg);
+}
+.login .btn-close::after {
+    content: "";
+    position: absolute;
+    top: 20px;
+    right: -40px;
+    width: 25px;
+    border: 3px solid #d0d0d0;
+    transform: rotate(-45deg);
+}
+.login h3 {
+    font-size: 30px;
+    height: 34px;
+    margin: 0;
+}
+.login input[type=text] {
+    width: 100%;
+    box-sizing: border-box;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    margin-bottom: 9px;
+    outline: none;
+    border: 2px solid #000;
+    padding-left: 10px;
+}
+.login input[type=text]::-webkit-input-placeholder {
+    text-transform: uppercase;
+    opacity: 1;
+}
+.login input[type=text]::-moz-placeholder {
+    text-transform: uppercase;
+    opacity: 1;
+}
+.login input.form-login {
+    background: url("../img/sprite-login.png") 270px 10px no-repeat;
+}
+.login input.form-password {
+    background: url("../img/sprite-login.png") 270px -40px no-repeat;
+    margin-bottom: 15px;
+}
+.login input[type=checkbox] {
+    display: none;
+}
+.login label {
+    position: relative;
+    margin: 0;
+    padding-left: 32px;
+}
+.login span {
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: -1px;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #000;
+}
+.login input[type=checkbox]:checked ~ label::after {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 1px;
+    width: 16px;
+    background: #000000;
+    border: 1px solid #000;
+    transform: rotate(45deg);
+}
+.login input[type=checkbox]:checked ~ label::before {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 1px;
+    width: 16px;
+    background: #000000;
+    border: 1px solid #000;
+    transform: rotate(-45deg);
+}
+.login a {
+    color: #000000;
+    float: right;
+}
+.login .enter {
+    display: block;
+    text-transform: uppercase;
+    text-align: center;
+    background: #000;
+    color: #ffffff;
+    border: none;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 8px;
+    margin-top: 15px;
+}
+.map {
+    position: fixed;
+    display: none;
+    width: 780px;
+    height: 570px;
+    top: 50%;
+    left: 50%;
+    margin-top: -285px;
+    margin-left: -390px;
+
+}
+.map iframe {
+    border: 7px solid #fff;
+}
+.map .btn-close-map {
+    font-size: 0;
+    position: absolute;
+    top: 20px;
+    right: -15px;
+    width: 0;
+    height: 0;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.map .btn-close-map::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -40px;
+    width: 25px;
+    border: 3px solid #d0d0d0;
+    transform: rotate(45deg);
+}
+.map .btn-close-map::after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: -40px;
+    width: 25px;
+    border: 3px solid #d0d0d0;
+    transform: rotate(-45deg);
+}
+.modal-content-show {
+    display: block;
 }
